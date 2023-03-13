@@ -1,4 +1,4 @@
-import style from "@/styles/TextArea.module.css";
+import style from "@/styles/TextArea.module.scss";
 import { useState, ChangeEvent } from "react";
 import getCopy from "@/services/openaiService";
 import { Results } from "./Result";
@@ -36,7 +36,8 @@ export const BlogSummaryTextArea = (): JSX.Element => {
             id="message"
             rows="4"
             onChange={handleChange}
-            className="m-8 h-20 p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
+            // className="m-8 h-20 p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
+            className={style.textarea}
             placeholder="Write the blog post summary here..."
           ></textarea>
           <button
