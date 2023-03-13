@@ -9,3 +9,22 @@ body {
   background-size: 56px 56px;
   background-color: rgb(222, 227, 232);
 }
+
+@media only screen and (max-width: 600px) {
+  .bg-pan-left {
+    animation: bg-pan-left 8s both;
+  }
+  @keyframes bg-pan-left {
+    0% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  body {
+    background-color: rgb(222, 227, 232);
+    animation-name: bg-pan-left;
+    animation-duration: 4s;
+  }
+}
